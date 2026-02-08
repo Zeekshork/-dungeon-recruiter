@@ -1,0 +1,94 @@
+:root {
+  color-scheme: dark;
+  --bg: #12080f;
+  --panel: #241126;
+  --accent: #d35a2c;
+  --ink: #f3dfd3;
+  --good: #50d17a;
+  --bad: #e15d5d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Inter, system-ui, sans-serif;
+  background: radial-gradient(circle at top, #2b0f1f 0%, var(--bg) 60%);
+  color: var(--ink);
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+}
+
+.game-shell {
+  width: min(980px, 100%);
+  background: color-mix(in oklab, var(--panel), black 15%);
+  border: 1px solid #5c2d4a;
+  border-radius: 14px;
+  padding: 1rem;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.7rem;
+}
+
+header p {
+  margin-top: 0.35rem;
+  opacity: 0.9;
+}
+
+.hud,
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin: 0.8rem 0;
+}
+
+.hud div {
+  background: #351633;
+  border: 1px solid #5f2f5b;
+  padding: 0.45rem 0.65rem;
+  border-radius: 8px;
+  min-width: 145px;
+}
+
+button {
+  border: 1px solid #8a4b65;
+  background: #46213a;
+  color: var(--ink);
+  padding: 0.45rem 0.8rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+button:hover {
+  background: #61304f;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+#message {
+  min-height: 1.4rem;
+  margin: 0.25rem 0 0.75rem;
+}
+
+#battlefield {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #6a3558;
+  background: linear-gradient(#3f1f26 0 55%, #2f1722 55% 100%);
+}
+
+.hidden {
+  display: none;
+}
